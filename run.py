@@ -42,11 +42,11 @@ def display_accounts():
  #_________________________________________CREDENTIALS____________________________________________________________________
 
 
-def create_credentials(credentials_name,usr_name,password,email):
+def create_credentials(credentials_name,user_name,password,email):
     '''
     Function to create a new account
     '''
-    new_credentials = Credentials(credentials_name,usr_name,password,email)
+    new_credentials = Credentials(credentials_name,user_name,password,email)
     return new_credentials
 
 def save_credentials(credentials):
@@ -84,12 +84,12 @@ def display_credentials():
 
 
 def main():
-    print("Hello Welcome to your Pass Word Locker. What is your name?")
+    print("Hello Welcome to your Pass_Word Generator . Input your name")
     user_name = input()
-    print(f"Hello {user_name}, sign up to Pass Word Locker to create an account.")
+    print(f"Hello {user_name}, sign up to Pass_Word Account to create an account.")
     print('\n')
     while True:
-        print("Use these known short codes to operate :\n SU -> SIGN UP.\n DA -> Display your account.\n LN ->LOGIN.\n ex ->exit Pass Word Locker. ")
+        print("Use these known short abbreviations to operate :\n SU -> SIGN UP.\n DA -> Display your account.\n LN ->LOGIN.\n ex ->exit Pass Word Locker. ")
         short_code = input().lower()
         if short_code == 'su':
             print("Create a Pass Word Locker Account")
@@ -128,30 +128,30 @@ def main():
                 #========================================CREDENTIALS AREA=======================================================================
                 while True:
                     print('''
-                    Use these short codes:
+                    Use these short abbreviations:
                     CA -> Create new credential.
-                    DC -> Display your credentials list
-                    ex ->Log out your credentials account.''')
+                    DL -> Display your credentials list
+                    lg ->Log out your credentials account.''')
                     short_code = input().lower()
                     if short_code == "ca":
                         print("Create new credential")
                         print('_' * 20)
                         credentials_name = input('Credential name:')
                         print('\n')
-                        usr_name = input(f"{credentials_name} user name:")
+                        user_name = input(f"{credentials_name} user name:")
                         print('\n')
                         print('*' * 20)
                         pwd = input(f"{credentials_name} password:")
                         save_credentials(create_credentials(credentials_name,u_name,pwd,e_address))
                         print('\n')
-                        print(f"A New {credentials_name} Account with the user name  {usr_name} has been created.")
+                        print(f"A New {credentials_name} Account with the user name  {user_name} has been created.")
                         print ('\n')
                     elif short_code == 'dc':
                          if display_credentials():
                              print("Here is your credentials")
                              print('\n')
                              for credentials in display_credentials():
-                                 print(f"Credential name:{credentials.credentials_name}  User name: {credentials.usr_name} Password:{credentials.password}")
+                                 print(f"Credential name:{credentials.credentials_name}  User name: {credentials.user_name} Password:{credentials.password}")
                                  print('\n')
                          else:
                               print('\n')
@@ -170,10 +170,10 @@ def main():
                 print('\n')
                     
         elif short_code == "ex":
-                    print(f"Thanks {user_name} for your time.I hope you enjoyed my service.Bye...")
+                    print(f"Thanks {user_name} .I appreciate your Time..")
                     break
         else:
-                    print("I really didn't get that. Please use the short codes")
+                    print("I really didn't get that. Please use the abbreviations")
 
 if __name__ == '__main__':
     main()   
