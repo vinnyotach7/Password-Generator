@@ -2,7 +2,7 @@ class Account:
     """
     Class that generates new instances of users.
     """
-    account_list = [] #empty account list
+    account_list = [] #empty accounts 
 
     def __init__(self,account_name,user_name,password,email):
         self.account_name = account_name
@@ -38,10 +38,7 @@ class Account:
     def account_exist(cls,name):
         '''
         Method that checks if a account exists from the account list.
-        Args:
-            name: Acc name to search if it exists
-        Returns :
-            Boolean: True or false depending if the account exists
+    
         '''
         for account in cls.account_list:
             if account.password == name:

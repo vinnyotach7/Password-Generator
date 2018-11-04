@@ -1,5 +1,5 @@
 import unittest # Importing the unittest module
-from account import Account # Importing the account class
+import Account from account  # Importing the account class
 
 
 class TestAccount(unittest.TestCase):
@@ -23,7 +23,7 @@ class TestAccount(unittest.TestCase):
         test_save_account test case to test if the account object is saved into
          the account list
         '''
-        self.new_account.save_account() # saving the new account
+        self.new_account.save_account() 
         self.assertEqual(len(Account.account_list),1)  
 
 
@@ -40,7 +40,7 @@ class TestAccount(unittest.TestCase):
             objects to our account_list
             '''
             self.new_account.save_account()
-            test_account = Account("Test","user","0722731751","test@user.com") # new account
+            test_account = Account("Test","user","0722731751","test@user.com") 
             test_account.save_account()
             self.assertEqual(len(Account.account_list),2)
 
@@ -49,7 +49,7 @@ class TestAccount(unittest.TestCase):
             test_delete_account to test if we can remove an account from our account list
             '''
             self.new_account.save_account()
-            test_account = Account("Test","user","0746058500","test@user.com") # account
+            test_account = Account("Test","user","0746058500","test@user.com") 
             test_account.save_account()
 
             self.new_account.delete_account()# Deleting an account object
@@ -61,7 +61,7 @@ class TestAccount(unittest.TestCase):
         '''
 
         self.new_account.save_account()
-        test_account = Account("Test","user","0746819636","test@user.com") # new account
+        test_account = Account("Test","user","0746819636","test@user.com") 
         test_account.save_account()
 
         found_account = Account.find_by_name("Test")
@@ -69,11 +69,11 @@ class TestAccount(unittest.TestCase):
         self.assertEqual(found_account.email,test_account.email)    
     def test_account_exists(self):
         '''
-        test to check if we can return a Boolean  if we cannot find the account.
+        test to check if we can return a true/false  if we cannot find the account.
         '''
 
         self.new_account.save_account()
-        test_account = Account("Test","user","0742819636","test@user.com") # new account
+        test_account = Account("Test","user","0742819636","test@user.com") 
         test_account.save_account()
 
         account_exists = Account.account_exist("0742819636")

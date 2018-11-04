@@ -24,7 +24,7 @@ def del_account(account):
 
 def find_account(name):
     '''
-    Function that finds a account by nane and returns the account
+    Function that finds a account by name and returns the account
     '''
     return Account.find_by_name(name)    
 
@@ -64,7 +64,7 @@ def del_credentials(credentials):
 
 def find_credentials(name):
     '''
-    Function that finds a account by nane and returns the account
+    Function that finds a account by name and returns the account
     '''
     return Credentials.find_by_name(name)    
 
@@ -106,7 +106,7 @@ def main():
             print(f"A New {account_name} Account with the user name  {u_name} has been created.")
             print(f"You can now login to your {account_name} account using your password.")
             print ('\n')
-        elif short_code == 'da':
+        if short_code == 'da':
              if display_accounts():
                  print("Here is your account and your details")
                  print('\n')
@@ -117,7 +117,7 @@ def main():
                  print('\n')
                  print("You dont seem to have created an account.Sign up to create a new account.")
                  print('\n')
-        elif short_code == 'ln':
+        if short_code == 'ln':
             print("Enter your password to login.")
             search_account = input()
             if check_existing_accounts(search_account):
@@ -146,7 +146,7 @@ def main():
                         print('\n')
                         print(f"A New {credentials_name} Account with the user name  {user_name} has been created.")
                         print ('\n')
-                    elif short_code == 'dc':
+                    if short_code == 'dc':
                          if display_credentials():
                              print("Here is your credentials")
                              print('\n')
@@ -157,7 +157,7 @@ def main():
                               print('\n')
                               print("You don't seem to have created any account yet")
                               print('\n')
-                    elif short_code == "ex":
+                    if short_code == "ex":
                         print('\n')
                         print(f"You have logged out your {account_name} account")
                         print('\n')
@@ -169,7 +169,7 @@ def main():
                 print('\n')
                 print('\n')
                     
-        elif short_code == "ex":
+        if short_code == "ex":
                     print(f"Thanks {user_name} .I appreciate your Time..")
                     break
         else:

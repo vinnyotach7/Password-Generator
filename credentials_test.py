@@ -5,7 +5,7 @@ from credentials import Credentials # Importing the account class
 class TestCredentials(unittest.TestCase):
     def setUp(self):
        
-        self.new_credentials = Credentials("Vinny","Otach","32180321","vinnyotach7@gmail.com") # create Account object
+        self.new_credentials = Credentials("Vinny","Otach","32180321","vinnyotach7@gmail.com") # create Account
 
     
     def test_init(self):
@@ -40,7 +40,7 @@ class TestCredentials(unittest.TestCase):
             objects to our account_list
             '''
             self.new_credentials.save_credentials()
-            test_credentials = Credentials("Test","user","0712345678","test@user.com") # new account
+            test_credentials = Credentials("Test","user","0712345678","test@user.com") 
             test_credentials.save_credentials()
             self.assertEqual(len(Credentials.credentials_list),2)
 
@@ -50,7 +50,7 @@ class TestCredentials(unittest.TestCase):
             test_delete_account to test if we can remove an account from our account list
             '''
             self.new_credentials.save_credentials()
-            test_credentials = Credentials("Test","user","0706086682","test@user.com") # account
+            test_credentials = Credentials("Test","user","0706086682","test@user.com") 
             test_credentials.save_credentials()
 
             self.new_credentials.delete_credentials()# Deleting an account object
@@ -62,7 +62,7 @@ class TestCredentials(unittest.TestCase):
         '''
 
         self.new_credentials.save_credentials()
-        test_credentials = Credentials("Test","user","0742819636","test@user.com") # new account
+        test_credentials = Credentials("Test","user","0742819636","test@user.com") 
         test_credentials.save_credentials()
 
         found_credentials = Credentials.find_by_name("Test")
@@ -77,7 +77,7 @@ class TestCredentials(unittest.TestCase):
         '''
 
         self.new_credentials.save_credentials()
-        test_credentials = Credentials("Test","user","0742819636","test@user.com") # new account
+        test_credentials = Credentials("Test","user","0742819636","test@user.com") 
         test_credentials.save_credentials()
 
         credentials_exists = Credentials.credentials_exist("0742819636")
