@@ -15,7 +15,7 @@ class TestAccount(unittest.TestCase):
 
         self.assertEqual(self.new_account.account_name,"Vinny")
         self.assertEqual(self.new_account.user_name,"Otach")
-        self.assertEqual(self.new_account.password,"3218021")
+        self.assertEqual(self.new_account.password,"32180321")
         self.assertEqual(self.new_account.email,"vinnyotach7@gmail.com")
 
     def test_save_account(self):
