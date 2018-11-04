@@ -14,7 +14,7 @@ class TestCredentials(unittest.TestCase):
         '''
 
         self.assertEqual(self.new_credentials.credentials_name,"Vinny")
-        self.assertEqual(self.new_credentials.usr_name,"Otach")
+        self.assertEqual(self.new_credentials.user_name,"Otach")
         self.assertEqual(self.new_credentials.password,"32180321")
         self.assertEqual(self.new_credentials.email,"vinnyotach7@gmail.com")
 
