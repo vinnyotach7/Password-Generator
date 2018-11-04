@@ -18,7 +18,7 @@ In the terminal you can run the following commands to execute.
 <li> DA - this displays your account</li>
 <li> LN - this is for logging to your account</li>
 <li> EX - this is for exiting your application</li>
-<li> CA - create a new credential</li>
+<li> NC - create a new credential</li>
 <li> DC - this prints the list of credentials</li>
 <li> EX - this is for logging out of your account</li>
 </ul>
