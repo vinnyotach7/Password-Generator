@@ -89,10 +89,10 @@ def main():
     print(f"Hello {user_name}, sign up to Pass_Word Account to create an account.")
     print('\n')
     while True:
-        print("Use these known short abbreviations to operate :\n SU -> SIGN UP.\n DA -> Display your account.\n LN ->LOGIN.\n ex ->exit Pass Word Locker. ")
+        print("Use these known short abbreviations to operate :\n SU -> SIGN UP.\n DA -> Display your account.\n LN ->LOGIN.\n ex ->exit Pass_Word Generator. ")
         short_code = input().lower()
         if short_code == 'su':
-            print("Create a Pass Word Locker Account")
+            print("Create a Pass_Word Generator Account")
             print("_"*100)
             account_name = input('Account name:')
             print ('\n')
@@ -129,11 +129,11 @@ def main():
                 while True:
                     print('''
                     Use these short abbreviations:
-                    CA -> Create new credential.
+                    NC -> Create new credential.
                     DL -> Display your credentials list
                     lg ->Log out your credentials account.''')
                     short_code = input().lower()
-                    if short_code == "ca":
+                    if short_code == "nc":
                         print("Create new credential")
                         print('_' * 20)
                         credentials_name = input('Credential name:')
@@ -165,7 +165,7 @@ def main():
                         
             else:
                 print('\n')
-                print("WRONG PASSWORD!! PLEASE ENTER CORRECT PASSWORD TO LOGIN")
+                print("WRONG PASSWORD! PLEASE ENTER CORRECT PASSWORD TO LOGIN")
                 print('\n')
                 print('\n')
                     
